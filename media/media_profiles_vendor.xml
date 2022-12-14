@@ -586,13 +586,13 @@
              channels="2" />
     </EncoderProfile>
 
-    <!-- CAMCORDER_QUALITY_HIGH_SPEED_LOW/720P : 720p@240fps; 56.0 Mbps -->
+    <!-- CAMCORDER_QUALITY_HIGH_SPEED_LOW/720P : 720p@120fps; 35.0 Mbps -->
     <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
         <Video codec="h264"
-               bitRate="56000000"
+               bitRate="35000000"
                width="1280"
                height="720"
-               frameRate="240" />
+               frameRate="120" />
         <!-- audio setting is ignored -->
         <Audio codec="aac"
              bitRate="256000"
@@ -616,10 +616,10 @@
 
     <EncoderProfile quality="highspeed720p" fileFormat="mp4" duration="30">
         <Video codec="h264"
-              bitRate="56000000"
+              bitRate="35000000"
               width="1280"
               height="720"
-              frameRate="240" />
+              frameRate="120" />
         <!-- audio setting is ignored -->
         <Audio codec="aac"
               bitRate="256000"

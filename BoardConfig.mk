@@ -14,25 +14,25 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/dubai
+DEVICE_PATH := device/motorola/tundra
 
 # Inherit from motorola sm7325-common
 include device/motorola/sm7325-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := dubai
+TARGET_BOOTLOADER_BOARD_NAME := tundra
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.dubai
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.tundra
 SOONG_CONFIG_qtidisplay_udfps := true
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_dubai.xml
-DEVICE_MANIFEST_YUPIK_FILES += $(DEVICE_PATH)/manifest_dubai.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_tundra.xml
+DEVICE_MANIFEST_YUPIK_FILES += $(DEVICE_PATH)/manifest_tundra.xml
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=dubai
-TARGET_KERNEL_CONFIG += vendor/lineage_dubai.config
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=tundra
+TARGET_KERNEL_CONFIG += vendor/lineage_tundra.config
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
@@ -58,7 +58,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # Security
-VENDOR_SECURITY_PATCH := 2022-10-01
+VENDOR_SECURITY_PATCH := 2022-11-01
 
 # inherit from the proprietary version
-include vendor/motorola/dubai/BoardConfigVendor.mk
+include vendor/motorola/tundra/BoardConfigVendor.mk
