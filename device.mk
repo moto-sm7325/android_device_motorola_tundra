@@ -24,10 +24,8 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 $(call inherit-product, device/motorola/sm7325-common/common.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_PACKAGES += \
+    ApertureResDevice \
     FrameworksResDevice \
     LineageSystemUIDevice \
     SettingsResDevice \
